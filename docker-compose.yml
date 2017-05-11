@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+
+  server:
+    build: .
+    
+    ports: 
+     - "2112:80"
+    
+    volumes:
+     - "./src:/var/www"
+     - "./resources/run_report.sh:/usr/local/bin/run_report.sh"
